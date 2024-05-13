@@ -6,29 +6,26 @@ using UnityEngine;
 
 public class Flashlight : MonoBehaviour
 {
-    [SerializeField] private GameObject light;
+    public float maxIntensity = 5f;
+    public float minIntensity = 0f;
+    public float fadeSpeed = 0.5f;
+
+    private Light light;
 
     private void Awake()
     {
-        light.SetActive(false);
+
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        light = GetComponent<Light>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        FlashlightToggle();
+        light.intensity = Mathf.Lerp(minIntensity, maxIntensity, Time.time/10);
     }
 
-    private void FlashlightToggle()
-    {
-        if (Input.GetButtonDown("Flashlight") == true)
-        {
-            light.SetActive(!light.activeSelf);
-        }
-    }
 }
