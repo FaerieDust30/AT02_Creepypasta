@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Faye Butler 6/05/24
+//Faye Butler 16/05/24
 
 public class Flashlight : MonoBehaviour
 {
@@ -32,10 +32,13 @@ public class Flashlight : MonoBehaviour
     {
         if (Input.GetButton("Flashlight") == true)
         {
-            chargeTime = Time.deltaTime / chargeSpeed;
-            fLight.intensity = Mathf.Lerp(fLight.intensity, maxIntensity, chargeTime);
-            fadeTime = 0f;
-            if(chargeTime > chargeSpeed)
+            if (fLight.intensity < maxIntensity)
+            {
+                fLight.intensity += Time.deltaTime * chargeSpeed;  //Mathf.Lerp(fLight.intensity, maxIntensity, chargeTime/chargeSpeed);
+                fadeTime = 0f;
+            }
+            //chargeTime += Time.deltaTime;
+            if (chargeTime > chargeSpeed)
             {
                 chargeTime = chargeSpeed;
             }
@@ -49,11 +52,14 @@ public class Flashlight : MonoBehaviour
             chargeTime = 0f;
             if (fadeTime < fadeSpeed)
             {
-                fLight.intensity = Mathf.Lerp(fLight.intensity, minIntensity, fadeTime / fadeSpeed);
-                fadeTime += Time.deltaTime;
+                if (fLight.intensity > 0f)
+                {
+                    fLight.intensity -= Time.deltaTime * fadeSpeed; //Mathf.Lerp(fLight.intensity, minIntensity, fadeTime / fadeSpeed);
+                    //fadeTime += Time.deltaTime;
+                }
                 if (fadeTime > fadeSpeed)
                 {
-                    fadeTime = fadeSpeed;
+                        fadeTime = fadeSpeed;
                 }
             }
         }

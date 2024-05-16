@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731715, g: 0.13414735, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1366,9 +1366,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxIntensity: 5
   minIntensity: 0
-  fadeSpeed: 15
+  fadeSpeed: 0.5
   fadeTime: 0
-  chargeSpeed: 15
+  chargeSpeed: 0.5
   chargeTime: 0
 --- !u!1001 &2081079631
 PrefabInstance:
