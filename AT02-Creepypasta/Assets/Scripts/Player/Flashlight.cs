@@ -34,10 +34,8 @@ public class Flashlight : MonoBehaviour
         {
             if (fLight.intensity < maxIntensity)
             {
-                fLight.intensity += Time.deltaTime * chargeSpeed;  //Mathf.Lerp(fLight.intensity, maxIntensity, chargeTime/chargeSpeed);
-                fadeTime = 0f;
+                fLight.intensity += Time.deltaTime * chargeSpeed; 
             }
-            //chargeTime += Time.deltaTime;
             if (chargeTime > chargeSpeed)
             {
                 chargeTime = chargeSpeed;
@@ -49,13 +47,11 @@ public class Flashlight : MonoBehaviour
     {
         if (Input.GetButton("Flashlight") == false)
         {
-            chargeTime = 0f;
             if (fadeTime < fadeSpeed)
             {
                 if (fLight.intensity > 0f)
                 {
-                    fLight.intensity -= Time.deltaTime * fadeSpeed; //Mathf.Lerp(fLight.intensity, minIntensity, fadeTime / fadeSpeed);
-                    //fadeTime += Time.deltaTime;
+                    fLight.intensity -= Time.deltaTime * fadeSpeed; 
                 }
                 if (fadeTime > fadeSpeed)
                 {
