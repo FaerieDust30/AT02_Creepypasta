@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 68e785b3f5377e84baba5425123f2e12
+guid: ecbe2cff4b8e5924384b15eb1630cfa2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,23 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Button Base Texture 1
-    second: {fileID: 2100000, guid: 9b22b0bbe51dab24db90010a53594f85, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Button texture 1
-    second: {fileID: 2100000, guid: c8e4eec1b4f7f794db2750050fc89260, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tex_Button1
-    second: {fileID: 2800000, guid: 544f488bc6d03d84cb8408311d6f2453, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tex_ButtonBase1
-    second: {fileID: 2800000, guid: 737f4ed1043a6a04a9fbbb5e81a783a6, type: 3}
+      name: Material.001
+    second: {fileID: 2100000, guid: 5c4a099016d83504fbf42f1c0150916a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
